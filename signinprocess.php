@@ -15,12 +15,24 @@
 		$userdb = "root";
 		$passworddb = "";
 		$dbname = "comscia_db";
+
+		//connect database
 		$conn = mysqli_connect($host, $userdb, $passworddb, $dbname);
-
+		//create sql command
 		$strsql = "select * from user_tb where uname ='" . $uname . "'and upassword ='".$upassword."'";
+		//query data
+		$result = mysqli_query($conn, $strsql);		
 
-		echo $strsql;
-		
+		if($result = mysqli_fetch_array($result))
+		{
+			//have
+			echo "ok";
+		}
+		else
+		{
+			//don't have
+			echo "Username or Password Incorrect !!!";
+		}
 ?>	
 </body>
 </html>
