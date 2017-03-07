@@ -10,6 +10,14 @@
 
 		$uname = $_POST['uname'];
 		$upassword = $_POST['upassword'];
+
+		$host = "localhost";
+		$userdb = "root";
+		$passworddb = "";
+		$dbname = "comsci_db"		
+		$conn = mysqli_connect($host,$userdb,$passworddb,$dbname);
+
+		$strsql = "select * from user_tb where";
 		
 ?>	
 </body>
