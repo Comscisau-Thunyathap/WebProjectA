@@ -14,10 +14,12 @@
 		$host = "localhost";
 		$userdb = "root";
 		$passworddb = "";
-		$dbname = "comsci_db"		
-		$conn = mysqli_connect($host,$userdb,$passworddb,$dbname);
+		$dbname = "comscia_db";
+		$conn = mysqli_connect($host, $userdb, $passworddb, $dbname);
 
-		$strsql = "select * from user_tb where";
+		$strsql = "select * from user_tb where uname ='" . $uname . "'and upassword ='".$upassword."'";
+
+		echo $strsql;
 		
 ?>	
 </body>
